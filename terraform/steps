@@ -1,0 +1,9 @@
+# step 1 download terraform then unzip the file : unzip terraform
+# command :
+./terraform
+mv terraform /bin 
+terraform
+rm -rf terrafom zip file
+
+terraform init
+terraform apply

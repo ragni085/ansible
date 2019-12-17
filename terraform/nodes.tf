@@ -20,3 +20,8 @@ resource "aws_instance" "node2" {
     Name = "Node2"
   }
 }
+
+resource "local_file" "inventory" {
+  filename = "../hosts-inventory"
+  content = "${aws_instance.node1.public_ip}\n${aws_instance.node2.public_ip}"
+}

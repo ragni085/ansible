@@ -17,7 +17,7 @@ resource "aws_instance" "node2" {
   instance_type = "t2.micro"
   vpc_security_group_ids = ["sg-001fb8d815f619f1c"]
   tags = {
-    Name = "Node3"
+    Name = "Node2"
   }
 }
 

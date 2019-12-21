@@ -2,3 +2,8 @@ trainerName: "raghu k"
 courseName: DevOps
 timing: 8PM
 startDate: 2019-12-13
+studentdetails:
+  -name: Raju
+   email: raju@gmail
+  -name: Rahul
+    email: rahul@gmail.com

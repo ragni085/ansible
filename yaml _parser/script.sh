@@ -5,5 +5,5 @@ if [! -f "$1"]; then
  exit 1
 fi
 
-echo -e "Hello XYZ,\n\tMy name TRAINER_NAME and I am a COURSE
-COURSE_NAME trainer.\nWe are starting a new batch from Date and timing is TIMING. If you are interested"
+echo -e "Hello XYZ,\n\tMy name TRAINER_NAME and I am a COURSE_NAME 
+trainer.\nWe are starting a new batch from Date and timing is TIMING. If you are interested"

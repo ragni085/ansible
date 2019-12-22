@@ -1,6 +1,6 @@
 #!/bin/bash
  
-if [! -f "$1"]; then
+if [ | -f "$1"]; then
  echo "Given file doesnot exist"
  exit 1
 fi
@@ -8,10 +8,10 @@ fi
 i=0
 STUDENT_COUNT=$(cat batch43.yml | yq . | jq '.studentDetails[].name' | wc -l)
 NAMES=(`cat batch43.yml|yq .|jq '.studentDetails[].name'|xargs`)
-TRAINER_NAME=(cat batch43.yml|yq .|jq '.tainerName')
-COURSENAME=(cat batch43.yml|yq .|jq '.courseNmae')
-STARTDATE=(cat batch43.yml|yq .|jq '.startDate')
-TIMING=(cat batch43.yml|yq .|jq '.timing')
+TRAINER_NAME=$(cat batch43.yml|yq .|jq '.tainerName')
+COURSENAME=$(cat batch43.yml|yq .|jq '.courseNmae')
+STARTDATE=$(cat batch43.yml|yq .|jq '.startDate')
+TIMING=$(cat batch43.yml|yq .|jq '.timing')
 
 while [$STUDENT_COUNT -gt 0];do 
 

@@ -23,8 +23,8 @@ resource "aws_instance" "node1" {
   //}
 //}
 
-//resource "local_file" "inventory" {
-  //filename = "../hosts-inventory"
-  //content  = "${aws_instance.node1.public_ip}"
-//}
+resource "local_file" "inventory" {
+  filename = "/tmp/hosts"
+  content  = "${aws_instance.node1.public_ip}"
+}
 

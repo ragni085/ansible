@@ -3,7 +3,7 @@ courseName: DevOps
 timing: 8PM
 startDate: 2019-12-13
 studentDetails: 
-  -name: Raju
-   email: raju@gmail.com
-  -name: Rahul
-   email: rahul@gmail.com
+  - name: Raju
+    email: raju@gmail.com
+  - name: Rahul
+    email: rahul@gmail.com

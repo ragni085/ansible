@@ -1,8 +1,8 @@
 #!/bin/bash
  
-if [ ! -f "$1" ] ; then    
- echo "Given file doesnot exist"
- exit 1
+if [ ! -f "$1" ]; then    
+  echo "Given file doesnot exist"
+  exit 1
 fi
 
 i=0
@@ -13,7 +13,7 @@ COURSENAME=$(cat batch43.yml|yq .|jq '.courseNmae')
 STARTDATE=$(cat batch43.yml|yq .|jq '.startDate')
 TIMING=$(cat batch43.yml|yq .|jq '.timing')
 
-while [$STUDENT_COUNT -gt 0];do 
+while [$STUDENT_COUNT -gt 0]; do 
 
 echo e "Hello XYZ,\n\tMy name is TRAINER_NAME and I am a COURSE_NAME trainer.
  \nWe are starting a new batch from Date and timing is TIMING.

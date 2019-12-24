@@ -1,7 +1,6 @@
-- name: Print Hello
-  hosts: all
+- name: Print Hello 
+  hosts: all 
   tasks:
-   - name: say Hello from Debug Module
-     debug:
-       msg: Hello
-   
+    - name: Say Helloo from Debug Module 
+      debug:
+        msg: Hello 

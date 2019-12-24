@@ -8,7 +8,10 @@ fi
 i=0
 STUDENT_COUNT=$(cat batch43.yml | yq . | jq '.studentDetails[].name' | wc -l)
 NAMES=(`cat batch43.yml|yq .|jq '.studentDetails[].name'|xargs`)
-
+TRAINER_NAME=$(cat batch43.yml|yq .|jq '.trainerName')
+COURSENAME=$(cat batch43.yml|yq .|jq '.courseNmae')
+STARTDATE=$(cat batch43.yml|yq .|jq '.startDate')
+TIMING=$(cat batch43.yml|yq .|jq '.timing')
 
 while [ $STUDENT_COUNT -gt 0 ]; do 
 

@@ -53,3 +53,23 @@
       debug:
         msg: URL = {{URL}}
 
+## Variable can be read from inventory file as well 
+# IP  URL_HOST=host.google.com 
+
+- name: Print values from a invetnory file 
+  hosts: all 
+  tasks:
+    - name: Print a value from inventory File 
+      debug:
+        msg: URL = {{URL_HOST}} 
+
+
+## Access varibles from facts. 
+
+- name: Access facts.
+  hosts: all
+  tasks:
+    - name: Print total mem of node.
+      debug:
+        msg: Total Mem = {{facter_memorysize_mb}}
+

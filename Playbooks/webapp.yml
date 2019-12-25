@@ -1,4 +1,4 @@
-- name Install $ Configure Web Server
+- name: Install $ Configure Web Server
   hosts: all
   become: yes
   tasks:

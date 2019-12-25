@@ -36,3 +36,20 @@
       debug:
         msg: URL = {{URL}}
 
+# Which variable will be picked up if you have given both VARS_FILES and then VARS ??
+## VARS get more priority than VARS_FILES.
+
+
+## Variable data can be read from USER as well like read command in shell scripting.
+
+- name: Print values from a file 
+  hosts: all 
+  vars_prompt:
+    - name: URL 
+      prompt: Enter the URL
+      private: no
+  tasks:
+    - name: Print a value from prompt File 
+      debug:
+        msg: URL = {{URL}}
+

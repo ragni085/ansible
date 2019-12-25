@@ -1,0 +1,8 @@
+- name Install $ Configure Web Server
+  hosts: all
+  become: yes
+  tasks:
+   - name: install Nginx Web Server
+     package: 
+       name: nginx
+       state: present

@@ -25,3 +25,14 @@
 ## What happens if you have same variable in both PLAY and TASK  ??
 ## Local variables are prioritized in any scripting language , So task variable is going to be the value parsed to task. And always you get vars from task 
 
+## Variable data can be loaded from variable file 
+
+- name: Print values from a file 
+  hosts: all 
+  vars_files:
+    - vars01.yml
+  tasks:
+    - name: Print a value from Vars File 
+      debug:
+        msg: URL = {{URL}}
+

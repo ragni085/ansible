@@ -22,7 +22,7 @@
 
 - name: Download JDBC Jar file
   get_url:
-    url: "{{jdbc_URL}}"
+    url: "{{JDBC_URL}}"
     dest: "/home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/lib"
   become_user: "{{APPUSER}}"
 

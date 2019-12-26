@@ -1,6 +1,6 @@
 - name: Install Java
   package:
-    name: Java
+    name: java
     state: latest
 
 - name: Create Application User
@@ -13,4 +13,3 @@
     dest: "/home/{{APPUSER}}"
     remote_src: yes
   become_user: "{{APPUSER}}"
-  

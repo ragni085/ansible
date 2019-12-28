@@ -36,7 +36,7 @@
   get_url:
      url: "{{TOMCAT_INIT_SCRIPT_URL}}"
      dest: /etc/init.d/tomcat
-     mode: u=rwx,g=ex,o=rx
+     mode: u=rwx,g=rx,o=rx
 
 - name: Reload Systemctl service
   systemd:

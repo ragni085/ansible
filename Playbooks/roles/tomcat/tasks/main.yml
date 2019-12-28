@@ -27,9 +27,10 @@
   become_user: "{{APPUSER}}"
   
 - name: Update Tomcat Context Configuration with Database Details
-  templates:
+  template:
      src: context.xml.j2
      dest: "/home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/conf/context.xml"
+  become_user: "{{APPUSER}}"
 
 - name: Download Tomcat Init script
   get_url:

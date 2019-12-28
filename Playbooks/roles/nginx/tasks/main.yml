@@ -16,7 +16,7 @@
   loop: "{{OUT.files}}"
   become: yes 
 
- - name:  Download studentapp web content
+- name:  Download studentapp web content
    unarchive:
      src: https://studentapi-cit.s3-us-west-2.amazonaws.com/studentapp-frontend.tar.gz
      dest: /usr/share/nginx/html/

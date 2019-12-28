@@ -25,12 +25,12 @@
     url: "{{JDBC_URL}}"
     dest: "/home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/lib"
   become_user: "{{APPUSER}}"
-  
+
 
 - name: Update Tomcat Context Configuration with Database Details
-  templates:
-    src: context.xml.j2
-    dest: "/home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/conf/context.xml"
+  # templates:
+  #   src: context.xml.j2
+  #   dest: "/home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/conf/context.xml"
 
 # - name: Update Tomcat Context Configuration with Database Details
 #   templates:

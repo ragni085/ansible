@@ -25,24 +25,17 @@
     url: "{{JDBC_URL}}"
     dest: "/home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/lib"
   become_user: "{{APPUSER}}"
-
-
+  
 - name: Update Tomcat Context Configuration with Database Details
-  # templates:
-  #   src: context.xml.j2
-  #   dest: "/home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/conf/context.xml"
-
-# - name: Update Tomcat Context Configuration with Database Details
-#   templates:
-#     src: context.xml.j2
-#     dest: "/home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/conf/context.xml"
-
+  templates:
+     src: context.xml.j2
+     dest: "/home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/conf/context.xml"
 
 - name: Download Tomcat Init script
   get_url:
-      url: "{{TOMCAT_INIT_SCRIPT_URL}}"
-      dest: /etc/init.d/tomcat
-      mode: u=rwx,g=ex,o=rx
+     url: "{{TOMCAT_INIT_SCRIPT_URL}}"
+     dest: /etc/init.d/tomcat
+     mode: u=rwx,g=ex,o=rx
 
 - name: Reload Systemctl service
   systemd:
@@ -50,8 +43,8 @@
 
 - name: Start Tomcat service
   service:
-      name: tomcat
-      state: restarted
+     name: tomcat
+     state: restarted
 
 
 

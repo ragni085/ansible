@@ -27,8 +27,8 @@
     src: nginx.conf
     dest: /etc/nginx/nginx.conf    
 
-# - name: Start the Nginx Service
-#   service:
-#     name: nginx
-#     state: restarted
-#     enabled: yes
+- name: Start the Nginx Service
+  service:
+    name: nginx
+    state: restarted
+    enabled: yes

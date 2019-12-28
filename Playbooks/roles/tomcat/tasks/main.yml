@@ -25,6 +25,7 @@
     url: "{{JDBC_URL}}"
     dest: "/home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/lib"
   become_user: "{{APPUSER}}"
+  
 
 - name: Update Tomcat Context Configuration with Database Details
   templates:

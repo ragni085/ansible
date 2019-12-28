@@ -28,7 +28,7 @@
 
 - name: Update Tomcat Context Configuration with Database Details
   templates:
-    src: Context.xml.j2
+    src: context.xml.j2
     dest: "/home/{{APPUSER}}/apache-tomcat-{{TOMCAT_VERSION}}/conf/context.xml"
 
 
